@@ -1,4 +1,4 @@
-import s from './ErrorMessage.module.css';
+import s from "./ErrorMessage.module.css";
 
 const ErrorMessage = () => {
   return <div>ErrorMessage</div>;

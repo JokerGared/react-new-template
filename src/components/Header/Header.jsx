@@ -1,5 +1,7 @@
-import s from './Heder.module.css';
-import Navigation from '../Navigation/Navigation';
+import s from "./Heder.module.css";
+import Navigation from "../Navigation/Navigation";
+import AuthNav from "../AuthNav/AuthNav";
+import UserMenu from "../UserMenu/UserMenu";
 
 const Header = () => {
   const isLoggedIn = true;
@@ -8,13 +10,7 @@ const Header = () => {
     <header>
       <Navigation />
 
-      {isLoggedIn && (
-        <div>
-          <img src='' alt='' />
-          <p>User name</p>
-          <button type='button'>Exit</button>
-        </div>
-      )}
+      {isLoggedIn ? <UserMenu /> : <AuthNav />}
     </header>
   );
 };
